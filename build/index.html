@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<title>Русский Терем</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="theme-color" content="#fff">
+	<link rel="stylesheet" media="all" href="css/style.css">
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="container">
+			<div class="hamburger hamburger_spin js-hamburger">
+				<div class="hamburger__box">
+					<div class="hamburger__inner"></div>
+				</div>
+			</div>
+			<a class="header__logo logo" href="index.html">
+				<img class="logo__img" src="img/logo.png" alt="Русский Терем">
+			</a>
+			<nav class="nav js-nav">
+				<a href="#calculate" class="nav__link">Калькулятор</a>
+				<a href="#works" class="nav__link">Портфолио</a>
+				<a href="#features" class="nav__link">О компании</a>
+				<a href="#testimonials" class="nav__link">Отзывы</a>
+				<a href="#ask" class="nav__link">Частые вопросы</a>
+				<a href="#contact" class="nav__link">Контакты</a>
+			</nav>
+			<div class="header__call call">
+				<a class="call__number" href="tel:89211111111">8 (921) 111-11-11</a>
+				<a class="call__btn btn js-popup-open" data-href="modal_call">Заказать звонок</a>
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<section class="screen">
+			<div class="screen__inner">
+				<h1 class="screen__title">Построим загородный дом<br> за 1,5 месяца по индивудуальному<br> проекту с гарантией</h1>
+			</div>
+			<a class="screen__scroll js-scroll" href="#0">Рассчитать стоимость</a>
+		</section>
+		<section id="calculate" class="calculate">
+			<div class="calculate__container container">
+				<h2 class="calculate__title">Рассчитайте, сколько стоит Ваш будущий дом:</h2>
+				<div class="calculate__row">
+					<div class="calculate__col">
+						<div class="calculate__sub-title">Количество этажей:</div>
+						<input class="calculate__input" id="floor-1" type="radio" name="floor">
+						<label class="calculate__floor" for="floor-1">1</label>
+						<input class="calculate__input" id="floor-2" type="radio" name="floor">
+						<label class="calculate__floor" for="floor-2">1,5 <span class="calculate__floor--sm">мансарда</span></label>
+						<input class="calculate__input" id="floor-3" type="radio" name="floor" checked>
+						<label class="calculate__floor" for="floor-3">2</label>
+					</div>
+					<div class="calculate__col">
+						<div class="calculate__sub-title">Площадь Вашего дома:</div>
+						<div class="calculate__area js-area"><input class="calculate__output js-area-output" type="text" readonly></div>
+					</div>
+				</div>
+				<div class="calculate__row">
+					<div class="calculate__col">
+						<div class="calculate__inner">
+							<div class="calculate__sub-title">Материал</div>
+							<div class="calculate__inner-col">
+								<input class="calculate__input" id="check-1" type="checkbox">
+								<label class="calculate__label" for="check-1">Подскажите мне материал</label>
+								<input class="calculate__input" id="check-2" type="checkbox">
+								<label class="calculate__label" for="check-2">Бревно ручной рубки</label>
+								<input class="calculate__input" id="check-3" type="checkbox">
+								<label class="calculate__label" for="check-3">Брус естественной влажности</label>
+							</div>
+							<div class="calculate__inner-col">
+								<input class="calculate__input" id="check-4" type="checkbox">
+								<label class="calculate__label" for="check-4">Оцилиндрованное бревно</label>
+								<input class="calculate__input" id="check-5" type="checkbox">
+								<label class="calculate__label" for="check-5">Профилированный брус</label>
+								<input class="calculate__input" id="check-6" type="checkbox">
+								<label class="calculate__label" for="check-6">Другое</label>
+							</div>
+						</div>
+					</div>
+					<div class="calculate__col">
+						<div class="calculate__inner">
+							<div class="calculate__sub-title">Отделка</div>
+							<div class="calculate__inner-col">
+								<input class="calculate__input" id="check-7" type="checkbox">
+								<label class="calculate__label" for="check-7">Внутренняя (под ключ)</label>
+								<input class="calculate__input" id="check-8" type="checkbox">
+								<label class="calculate__label" for="check-8">Электрика</label>
+								<input class="calculate__input" id="check-9" type="checkbox">
+								<label class="calculate__label" for="check-9">Окна</label>
+							</div>
+							<div class="calculate__inner-col">
+								<input class="calculate__input" id="check-10" type="checkbox">
+								<label class="calculate__label" for="check-10">Теплый пол</label>
+								<input class="calculate__input" id="check-11" type="checkbox">
+								<label class="calculate__label" for="check-11">Автономная канализация</label>
+								<input class="calculate__input" id="check-12" type="checkbox">
+								<label class="calculate__label" for="check-12">Покраска</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button class="calculate__btn btn js-popup-open" type="button" data-href="modal_call">Рассчитать стоимость</button>
+			</div>
+		</section>
+		<section id="works" class="works">
+			<div class="container">
+				<h2 class="works__title">Более <span class="works__title--lg">50</span> работ с индивидуальной планировкой</h2>
+				<div class="works__inner js-works">
+					<div class="works__item">
+						<div class="works__pic">
+							<img class="works__img" src="img/content/work-1.jpg" alt="Вологодская область, с. Устье Кубенское">
+						</div>
+						<div class="works__text">
+							<div class="works__address">Вологодская область, с. Устье Кубенское</div>
+							<div class="works__area">Площадь: 160 м<span class="works__area--sm">2</span></div>
+							<div class="works__price">Итоговая стоимость: 540 тыс. ₽</div>
+						</div>
+						<a class="works__btn btn js-popup-open" href="#0" data-href="modal_call">Хочу так же!</a>
+					</div>
+					<div class="works__item">
+						<div class="works__pic">
+							<img class="works__img" src="img/content/work-2.jpg" alt="Вологодская область, с. Устье Кубенское">
+						</div>
+						<div class="works__text">
+							<div class="works__address">Вологодский район, п. Харачево</div>
+							<div class="works__area">Площадь: 204 м<span class="works__area--sm">2</span></div>
+							<div class="works__price">Итоговая стоимость: 1296 тыс. ₽</div>
+						</div>
+						<a class="works__btn btn js-popup-open" href="#0" data-href="modal_call">Хочу так же!</a>
+					</div>
+					<div class="works__item">
+						<div class="works__pic">
+							<img class="works__img" src="img/content/work-3.jpg" alt="Вологодская область, с. Устье Кубенское">
+						</div>
+						<div class="works__text">
+							<div class="works__address">Московская область, д. Варварино</div>
+							<div class="works__area">Площадь: 64 м<span class="works__area--sm">2</span></div>
+							<div class="works__price">Итоговая стоимость: 194 тыс. ₽</div>
+						</div>
+						<a class="works__btn btn js-popup-open" href="#0" data-href="modal_call">Хочу так же!</a>
+					</div>
+					<div class="works__item">
+						<div class="works__pic">
+							<img class="works__img" src="img/content/work-4.jpg" alt="Вологодская область, с. Устье Кубенское">
+						</div>
+						<div class="works__text">
+							<div class="works__address">Вологодский район, п. Дорожный</div>
+							<div class="works__area">Площадь: 82 м<span class="works__area--sm">2</span></div>
+							<div class="works__price">Итоговая стоимость: 324 тыс. ₽</div>
+						</div>
+						<a class="works__btn btn js-popup-open" href="#0" data-href="modal_call">Хочу так же!</a>
+					</div>
+					<div class="works__item">
+						<div class="works__pic">
+							<img class="works__img" src="img/content/work-5.jpg" alt="Вологодская область, с. Устье Кубенское">
+						</div>
+						<div class="works__text">
+							<div class="works__address">Московская область, д. Сельцо</div>
+							<div class="works__area">Площадь: 210 м<span class="works__area--sm">2</span></div>
+							<div class="works__price">Итоговая стоимость: 1024 тыс. ₽</div>
+						</div>
+						<a class="works__btn btn js-popup-open" href="#0" data-href="modal_call">Хочу так же!</a>
+					</div>
+					<div class="works__item">
+						<div class="works__pic">
+							<img class="works__img" src="img/content/work-6.jpg" alt="Вологодская область, с. Устье Кубенское">
+						</div>
+						<div class="works__text">
+							<div class="works__address">Московская область, д. Жизнеево</div>
+							<div class="works__area">Площадь: 4 м<span class="works__area--sm">2</span></div>
+							<div class="works__price">Итоговая стоимость: 65 тыс. ₽</div>
+						</div>
+						<a class="works__btn btn js-popup-open" href="#0" data-href="modal_call">Хочу так же!</a>
+					</div>
+				</div>
+				<button class="works__more js-works-more" type="button">ПОКАЗАТЬ ЕЩЁ ></button>
+			</div>
+		</section>
+		<section id="features" class="features">
+			<div class="container">
+				<h2 class="features__title">Мы делаем дома с 2006 года</h2>
+				<p class="features__descr">Это позволяет работать быстро и «без косяков»</p>
+				<div class="features__row">
+					<div class="features-item">
+						<div class="features-item__pic features-item__pic--1"></div>
+						<div class="features-item__text">Опыт более<br> 10 лет</div>
+					</div>
+					<div class="features-item">
+						<div class="features-item__pic features-item__pic--2"></div>
+						<div class="features-item__text">30 профессиональных<br> сотрудников</div>
+					</div>
+					<div class="features-item">
+						<div class="features-item__pic features-item__pic--3"></div>
+						<div class="features-item__text">Построено более<br> 12 000 м2</div>
+					</div>
+				</div>
+			</div>
+			<div class="features__leader">
+				<div class="container">
+					<div class="features__col">
+						<div class="features__leader-text">
+							<p class="features__leader-descr features__leader-descr--b">Меня зовут Сергей Баданин, руководитель компании «Русский терем».</p>
+							<p class="features__leader-descr">Я начал заниматься строительством <span class="features__leader-descr--b">с 18-ти лет</span> под руководством своего дяди, архангельского мастера, плотника с огромным опытом. Работать с деревом я полюбил с первых дней. Сейчас, <span class="features__leader-descr--b">спустя 10 лет</span>								непрерывной практики, мне удалось накопить <span class="features__leader-descr--b">большой опыт</span> в деревянном домостроении и собрать команду профессионалов, которую я обучаю и контролирую лично.</p>
+							<p class="features__leader-descr features__leader-descr--i">Возможно, Вам тяжело определиться с материалом для дома, подрядчиком, технологией строительства или чем-то еще.</p>
+						</div>
+						<div class="features__request request">
+							<p class="request__text">Оставьте заявку и я сам перезвоню Вам, бесплатно расскажу и проконсультирую, какой дом подойдет именно для Вас</p>
+							<form class="request-form js-calculate-form">
+								<div class="request-form__style">
+									<input class="request-form__field" type="text" name="Номер телефона" placeholder="Введите номер" required>
+								</div>
+								<button class="request-form__btn btn" type="submit" name="send request">Оставить заявку</button>
+								<input type="hidden" name="project_name" value="Русский Терем">
+								<input type="hidden" name="admin_email" value="nazarriko@gmail.com">
+								<input type="hidden" name="form_subject" value="Form Subject">
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="featuresMobile" class="features is-mobile">
+			<div class="features__leader">
+				<div class="container">
+					<div class="features__col">
+						<div class="features__request is-mobile">
+							<p class="request__text">Оставьте заявку и я сам перезвоню Вам, <b>бесплатно</b> расскажу и проконсультирую, какой дом подойдет именно для Вас</p>
+							<form class="request-form js-calculate-form">
+								<div class="request-form__style">
+									<input class="request-form__field" type="text" name="Номер телефона" placeholder="Введите номер" required>
+								</div>
+								<button class="request-form__btn btn" type="submit" name="send request">Оставить заявку</button>
+								<input type="hidden" name="project_name" value="Русский Терем">
+								<input type="hidden" name="admin_email" value="nazarriko@gmail.com">
+								<input type="hidden" name="form_subject" value="Form Subject">
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="testimonials" class="testimonials">
+			<div class="container">
+				<h2 class="testimonials__title">Реальные отзывы от реальных людей</h2>
+				<p class="testimonials__descr">Каждому из них можно написать и задать вопросы</p>
+				<div class="testimonials__inner">
+					<div class="testimonials__carousel js-carousel">
+						<div class="testimonials__item">
+							<div class="testimonials__item-left">
+								<div class="testimonials__item-pic">
+									<img class="testimonials__item-img" src="img/content/testimonial-1.jpg" alt="Виктор Таринов">
+								</div>
+								<a class="testimonials__item-btn btn" href="#0">Подробнее</a>
+							</div>
+							<div class="testimonials__item-text">
+								<div class="testimonials__item-title">Виктор Таринов</div>
+								<a class="testimonials__item-link" href="#0">vk.com/dssdvs</a>
+								<p class="testimonials__item-descr">Ребята из Русского терема строили дом другу, ему все понравилось. Он посоветовал мне и они построили дачу, баню. Вся наша семья рада этим постройкам...</p>
+							</div>
+						</div>
+						<div class="testimonials__item">
+							<div class="testimonials__item-left">
+								<div class="testimonials__item-pic">
+									<img class="testimonials__item-img" src="img/content/testimonial-2.jpg" alt="Дмитрий Власов">
+								</div>
+								<a class="testimonials__item-btn btn" href="#0">Подробнее</a>
+							</div>
+							<div class="testimonials__item-text">
+								<div class="testimonials__item-title">Дмитрий Власов</div>
+								<a class="testimonials__item-link" href="#0">vk.com/dssdvs</a>
+								<p class="testimonials__item-descr">Наш загородный дом построен командой из "Русского терема", понравилась организация и качество работ. Сделали все, вплоть до подведения ...</p>
+							</div>
+						</div>
+						<div class="testimonials__item">
+							<div class="testimonials__item-left">
+								<div class="testimonials__item-pic">
+									<img class="testimonials__item-img" src="img/content/testimonial-3.jpg" alt="Руслан Зорин">
+								</div>
+								<a class="testimonials__item-btn btn" href="#0">Подробнее</a>
+							</div>
+							<div class="testimonials__item-text">
+								<div class="testimonials__item-title">Руслан Зорин</div>
+								<a class="testimonials__item-link" href="#0">vk.com/dssdvs</a>
+								<p class="testimonials__item-descr">Заказывал постройку бани, построили настоящую баню-теремок, все отлично. Спасибо, Русский терем!</p>
+							</div>
+						</div>
+						<div class="testimonials__item">
+							<div class="testimonials__item-left">
+								<div class="testimonials__item-pic">
+									<img class="testimonials__item-img" src="img/content/testimonial-1.jpg" alt="Виктор Таринов">
+								</div>
+								<a class="testimonials__item-btn btn" href="#0">Подробнее</a>
+							</div>
+							<div class="testimonials__item-text">
+								<div class="testimonials__item-title">Виктор Таринов</div>
+								<a class="testimonials__item-link" href="#0">vk.com/dssdvs</a>
+								<p class="testimonials__item-descr">Ребята из Русского терема строили дом другу, ему все понравилось. Он посоветовал мне и они построили дачу, баню. Вся наша семья рада этим постройкам...</p>
+							</div>
+						</div>
+						<div class="testimonials__item">
+							<div class="testimonials__item-left">
+								<div class="testimonials__item-pic">
+									<img class="testimonials__item-img" src="img/content/testimonial-2.jpg" alt="Дмитрий Власов">
+								</div>
+								<a class="testimonials__item-btn btn" href="#0">Подробнее</a>
+							</div>
+							<div class="testimonials__item-text">
+								<div class="testimonials__item-title">Дмитрий Власов</div>
+								<a class="testimonials__item-link" href="#0">vk.com/dssdvs</a>
+								<p class="testimonials__item-descr">Наш загородный дом построен командой из "Русского терема", понравилась организация и качество работ. Сделали все, вплоть до подведения ...</p>
+							</div>
+						</div>
+						<div class="testimonials__item">
+							<div class="testimonials__item-left">
+								<div class="testimonials__item-pic">
+									<img class="testimonials__item-img" src="img/content/testimonial-3.jpg" alt="Руслан Зорин">
+								</div>
+								<a class="testimonials__item-btn btn" href="#0">Подробнее</a>
+							</div>
+							<div class="testimonials__item-text">
+								<div class="testimonials__item-title">Руслан Зорин</div>
+								<a class="testimonials__item-link" href="#0">vk.com/dssdvs</a>
+								<p class="testimonials__item-descr">Заказывал постройку бани, построили настоящую баню-теремок, все отлично. Спасибо, Русский терем!</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="steps">
+			<h2 class="steps__title">Как мы работаем</h2>
+			<div class="container">
+				<div class="steps__row">
+					<div class="steps__item steps__item--first">
+						<div class="steps__item-number">1</div>
+						<div class="steps__item-title">Оставьте заявку</div>
+					</div>
+					<div class="steps__request request">
+						<form class="request-form js-calculate-form">
+							<div class="request-form__style">
+								<input class="request-form__field" type="text" name="Номер телефона" placeholder="Введите номер" required>
+							</div>
+							<button class="request-form__btn btn" type="submit" name="send request">Оставить заявку</button>
+							<input type="hidden" name="project_name" value="Русский Терем">
+							<input type="hidden" name="admin_email" value="nazarriko@gmail.com">
+							<input type="hidden" name="form_subject" value="Form Subject">
+						</form>
+					</div>
+				</div>
+				<div class="steps__row">
+					<div class="steps__item">
+						<div class="steps__item-pic">
+							<img class="steps__item-img" src="img/content/steps-2.png" alt="Звонок или встреча для уточнения всех параметров объекта">
+							<div class="steps__item-number">2</div>
+						</div>
+						<p class="steps__item-text">Звонок или встреча<br> для уточнения всех<br> параметров объекта</p>
+					</div>
+					<div class="steps__item">
+						<div class="steps__item-pic">
+							<img class="steps__item-img" src="img/content/steps-3.png" alt="Составление сметы и согласование стоимости">
+							<div class="steps__item-number">3</div>
+						</div>
+						<p class="steps__item-text">Составление сметы<br> и согласование стоимости</p>
+					</div>
+					<div class="steps__item">
+						<div class="steps__item-pic">
+							<img class="steps__item-img" src="img/content/steps-4.png" alt="Заключение договора, предоплата 10%">
+							<div class="steps__item-number">4</div>
+						</div>
+						<p class="steps__item-text">Заключение договора,<br> предоплата 10%</p>
+					</div>
+					<div class="steps__item">
+						<div class="steps__item-pic">
+							<img class="steps__item-img" src="img/content/steps-5.png" alt="Строительство дома">
+							<div class="steps__item-number">5</div>
+						</div>
+						<p class="steps__item-text">Строительство<br> дома</p>
+					</div>
+					<div class="steps__item">
+						<div class="steps__item-pic">
+							<img class="steps__item-img" src="img/content/steps-6.png" alt="Уборка и благоустройство территории">
+							<div class="steps__item-number">6</div>
+						</div>
+						<p class="steps__item-text">Уборка и благоустройство<br> территории</p>
+					</div>
+					<div class="steps__item">
+						<div class="steps__item-pic">
+							<img class="steps__item-img" src="img/content/steps-7.png" alt="Подписание акта приема работы">
+							<div class="steps__item-number">7</div>
+						</div>
+						<p class="steps__item-text">Подписание акта<br> приема работы</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="ask" class="questions">
+			<div class="container">
+				<h2 class="questions__title">Частые вопросы</h2>
+				<div class="questions__accordion accordion">
+					<div class="accordion__title">
+						<div class="accordion__title-in js-accordion-title">Какой материал выбрать для строительства дома? Лучше дом из бревна или бруса?<i class="accordion__icon icon-acc_arrow"></i></div>
+						<div class="accordion__inner js-accordion-inner">
+							<p class="accordion__content">Нет однозначного ответа, если сравнивать по стоимости «коробка» из бруса будет стоить дешевле, чем из бревна.но брус потребует больших вложений на отделку. Но дом из бревна крепче, чем дом из бруса. В бревне сохранена вся структура дерева, оставлен
+								верхний самый крепкий слой дерева,а брус выпиливается из разных частей бревна, что приводит к трещинам и изгибам такого материала.</p>
+						</div>
+					</div>
+					<div class="accordion__title">
+						<div class="accordion__title-in js-accordion-title">Сколько времени занимает строительство?<i class="accordion__icon icon-acc_arrow"></i></div>
+						<div class="accordion__inner doc js-accordion-inner">
+							<p class="accordion__content">Всё зависит от объемов. Например, небольшую баньку можно можно сделать «под усадку»<span class="accordion__content--color">*</span> за 2 - 3 недели. Дом для постоянного проживания от месяца и более.</p>
+							<p class="accordion__content"><span class="accordion__content--color">*</span>«Усадка» - это свойство строительного материала, в процессе сушки дерево изменяет свой объем. Не делайте окна и двери, пока не завершилась усадка дома.</p>
+						</div>
+					</div>
+					<div class="accordion__title">
+						<div class="accordion__title-in js-accordion-title">В какое время года нужно ставить сруб?<i class="accordion__icon icon-acc_arrow"></i></div>
+						<div class="accordion__inner doc js-accordion-inner">
+							<p class="accordion__content">Фундамент под струб возводиться в тёплое время года. Работы по возведению сруба выполняются зимой, т.к. древесина имеет наименьший процент влажности. С наступлением весеннего тепла естественным путём сруб адаптируется к природным условиям, даёт
+								определённую деформацию, брёвна плотно прилегают друг к другу.</p>
+						</div>
+					</div>
+					<div class="accordion__title">
+						<div class="accordion__title-in js-accordion-title">Материалы входят в стоимость работы?<i class="accordion__icon icon-acc_arrow"></i></div>
+						<div class="accordion__inner doc js-accordion-inner">
+							<p class="accordion__content">Это зависит от потребностей заказчика. Работаем как с материалом клиента, так и со своим.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="ask">
+			<div class="container">
+				<div class="ask__col">
+					<h3 class="ask__title">Остались ещё вопросы?</h3>
+					<p class="ask__descr">Задайте его прямо сейчас!</p>
+				</div>
+				<div class="ask__col">
+					<form class="ask__form js-calculate-form">
+						<textarea class="ask__question" name="Вопрос" placeholder="Ваш вопрос..." required></textarea>
+						<div class="ask__request request">
+							<div class="request-form">
+								<div class="request-form__style">
+									<input class="request-form__field" name="Номер телефона" type="text" placeholder="Введите номер" required>
+								</div>
+								<button class="request-form__btn btn" type="submit" name="send request">Отправить</button>
+							</div>
+						</div>
+						<input type="hidden" name="project_name" value="Русский Терем">
+						<input type="hidden" name="admin_email" value="nazarriko@gmail.com">
+						<input type="hidden" name="form_subject" value="Form Subject">
+					</form>
+					<div class="ask__call">
+						<p class="ask__text">Или позвоните, всё подробно расскажем!</p>
+						<a class="ask__number" href="tel:89211111111">8 (921) 111-11-11</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="ask is-mobile">
+			<div class="container">
+				<div class="ask__call is-mobile">
+					<p class="ask__text">Или позвоните, всё подробно расскажем!</p>
+					<a class="ask__number" href="tel:89211111111">8 (921) 111-11-11</a>
+				</div>
+			</div>
+		</section>
+		<section id="contact" class="contact">
+			<div class="contact__inner">
+				<h2 class="contact__title">Контакты</h2>
+				<div class="contact__col">
+					<p class="contact__address">Адрес: Вологодская область, Вологодский район, п. Харачево</p>
+					<a class="contact__number" href="tel:89211111111">8 (921) 111-11-11</a>
+				</div>
+				<!-- VK Widget -->
+				<div id="vk_groups"></div>
+			</div>
+			<div id="map" class="contact__map"></div>
+		</section>
+	</main>
+	<footer class="footer">
+		<div class="container">
+			<a class="footer__logo logo" href="index.html">
+				<img class="logo__img" src="img/logo.png" alt="Русский Терем">
+			</a>
+			<a class="footer__number" href="tel:89211111111">8 (921) 111-11-11</a>
+			<a class="scroll-top"><i class="scroll-top__icon icon-acc_arrow"></i></a>
+		</div>
+	</footer>
+	<script src="js/app.js"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+	<script src="//vk.com/js/api/openapi.js?136"></script>
+</body>
+
+</html>

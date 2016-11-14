@@ -1,0 +1,81 @@
+//***=== FONTS ===***//
+$default-fonts: Arial, sans-serif
+
++font(PTSans-Regular, PTSans-Regular)
++font(PTSans-Bold, PTSans-Bold)
++font(PTSans-BoldItalic, PTSans-BoldItalic)
++font(GothamPro-Bold, GothamPro-Bold)
+
+=PTSans-Regular
+	font-family: PTSans-Regular, $default-fonts
+
+=PTSans-Bold
+	font-family: PTSans-Bold, $default-fonts
+
+=PTSans-BoldItalic
+	font-family: PTSans-BoldItalic, $default-fonts
+
+=GothamPro-Bold
+	font-family: GothamPro-Bold, $default-fonts
+
+// default transition
+
+=trs
+	transition: .3s ease-in
+
+body
+	font-size: 18px
+	line-height: 1.2
+	+PTSans-Regular
+	-webkit-tap-highlight-color: rgba(0,0,0,0)
+	&.is-locked
+		overflow: hidden
+
+// common blocks
+
+.container
+	max-width: 1200px
+	margin: 0 auto
+	padding: 0 15px
+	+clr
+	+r(1199)
+		padding-left: 30px
+		padding-right: 30px
+	+r(767)
+		padding-left: 15px
+		padding-right: 15px
+
+.btn
+	padding: 14px 28px
+	color: #fff
+	background-color: #ef7f1a
+	font-size: 16px
+	outline: none
+	border-radius: 10px
+	text-decoration: none
+	text-transform: uppercase
+	cursor: pointer
+	+PTSans-Bold
+	+trs
+	letter-spacing: 0.05em
+	-webkit-font-smoothing: antialiased
+	+r(767)
+		font-size: 12px
+		padding-top: 10px
+		padding-bottom: 10px
+		border-radius: 5px
+	&:hover
+		background-color: #ea5b21
+	&:active
+		background-color: #c75527
+
+h2
+	font-size: 30px
+	text-align: center
+	+GothamPro-Bold
+	+r(767)
+		font-size: 18px
+
+img
+	display: block
+	max-width: 100%

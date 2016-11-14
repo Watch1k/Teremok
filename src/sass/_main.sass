@@ -1,0 +1,1496 @@
+//***=== HEADER ===***//
+
+.header
+   position: relative
+   z-index: 1
+   padding: 17px 0
+   background-color: #165231
+   +r(1199)
+      padding-bottom: 87px
+   +r(767)
+      padding-top: 9px
+      padding-bottom: 18px
+   &__logo
+      float: left
+      +r(767)
+         float: none
+         position: absolute
+         top: 9px
+         left: 50%
+         margin-left: -27px
+         overflow: hidden
+         height: 54px
+         width: 54px
+   .logo__img
+      +r(767)
+         max-width: none
+         height: 100%
+         width: auto
+   &__call
+      float: right
+      +clr
+      +r(1199)
+         padding-top: 25px
+      +r(767)
+         width: 100%
+         padding-top: 20px
+         text-align: center
+
+.logo
+   width: 211px
+
+.nav
+   float: left
+   margin: 28px 0 0 53px
+   font-size: 0
+   +r(1199)
+      float: none
+      position: absolute
+      bottom: 39px
+      left: 0
+      right: 0
+      margin-left: 30px
+   +r(767)
+      position: absolute
+      pointer-events: none
+      z-index: 10
+      top: 100%
+      left: 0
+      right: 0
+      background-color: #ffffff
+      margin: -60px 0 0 0
+      bottom: auto
+      padding-top: 15px
+      padding-bottom: 15px
+      transform: translateX(-100%)
+      transition: all 0.4s
+      +clr
+      &.is-active
+         pointer-events: auto
+         transform: translateX(0)
+   &__link
+      display: inline-block
+      font-size: 14px
+      color: #fff
+      text-decoration: none
+      text-transform: uppercase
+      +trs
+      &:hover
+         color: #ef7f1a
+      & + &
+         margin-left: 33px
+      +r(767)
+         display: block
+         color: #000000
+         margin-left: 0
+         padding-left: 24px
+         font-size: 12px
+         padding-top: 10px
+         padding-bottom: 10px
+         & + &
+            margin-left: 0
+
+.call
+   &__number
+      display: block
+      font-size: 24px
+      +GothamPro-Bold
+      color: #fff
+      text-decoration: none
+      +r(1199)
+         float: left
+         margin-top: 13px
+         margin-right: 25px
+      +r(767)
+         float: none
+         margin-right: 22px
+         margin-top: 6px
+         font-size: 15px
+         display: inline-block
+         vertical-align: middle
+   &__btn
+      display: inline-block
+      margin-top: 3px
+      padding: 9px 23px
+      font-size: 14px
+      letter-spacing: 0.05em
+      +r(1199)
+         float: left
+      +r(767)
+         float: none
+         vertical-align: middle
+         padding-left: 15px
+         padding-right: 15px
+
+//***=== MAIN ===***//
+
+.screen
+   position: relative
+   background: url(../img/bg/screen_bg.jpg) no-repeat top center/cover
+   min-height: 600px
+   height: 0
+   +r(767)
+      min-height: 320px
+   &__inner
+      height: 100%
+      text-align: center
+      &::before
+         content: ''
+         display: inline-block
+         vertical-align: middle
+         height: 100%
+   &__title
+      display: inline-block
+      vertical-align: middle
+      margin-top: -50px
+      font-size: 45px
+      text-transform: uppercase
+      line-height: 1.33
+      color: #fff
+      text-align: center
+      +GothamPro-Bold
+      +r(1199)
+         max-width: 80%
+         font-size: 36px
+      +r(767)
+         max-width: 90%
+         font-size: 18px
+      br
+         +r(1199)
+            display: none
+   &__scroll
+      position: absolute
+      left: 50%
+      bottom: 13%
+      transform: translateX(-50%)
+      font-size: 20px
+      text-transform: uppercase
+      text-decoration: none
+      letter-spacing: 0.025em
+      color: #fff
+      +PTSans-Bold
+      transition: all 0.25s
+      &:hover
+         color: #ef7f1a
+      +r(767)
+         left: 10%
+         right: 10%
+         transform: translateX(0)
+         text-align: center
+         font-size: 14px
+      &::after
+         position: absolute
+         left: 50%
+         bottom: -31px
+         margin-left: -20px
+         content: ''
+         +s(arrow_down)
+         animation: arrow 1.5s ease infinite alternate
+         +r(767)
+            bottom: -15px
+            margin-left: -10px
+            +sr(arrow_down)
+
+@keyframes arrow
+   0%, 100%
+      transform: translateY(5px)
+   100%
+      transform: translateY(15px)
+
+// calculate section
+
+.layer-popup
+   display: none
+   cursor: pointer
+   position: fixed
+   z-index: 1000
+   top: 0
+   left: 0
+   right: 0
+   bottom: 0
+   height: 100%
+   width: 100%
+   background-color: rgba(0, 0, 0,.3)
+   user-select: none
+
+.calculate
+   position: relative
+   padding: 65px 0 60px
+   background-color: #f1f0f0
+   text-align: center
+   +r(1199)
+      padding: 45px 0 40px
+   &__output
+      top: 100% !important
+      left: -40px !important
+      +r(767)
+         left: -20px!important
+   &__sup
+      position: absolute
+      top: 100%
+      margin-top: 8px
+      left: 10px
+      height: 50px
+      +GothamPro-Bold
+      font-size: 30px
+      color: #000
+      background-color: transparent
+      +r(767)
+         margin-top: 15px
+         font-size: 15px
+      sup
+         vertical-align: super
+         font-size: 0.6em
+   &__container
+      position: relative
+   &__row
+      margin: 50px 0 0
+      clear: both
+      +clr
+      +r(767)
+         margin-top: 30px
+      & + &
+         +r(767)
+            margin-top: 60px
+            margin-left: -15px
+            margin-right: -15px
+      &:nth-of-type(2) :first-child.calculate__col
+         width: 51.2820512%
+         +r(1199)
+            width: 100%
+      &:nth-of-type(2) :last-child.calculate__col
+         width: 42.7350427%
+         +r(1199)
+            width: 100%
+   &__col
+      &:nth-of-type(1)
+         float: left
+         width: 42.7350427%
+         +r(1199)
+            width: 75%
+         +r(767)
+            width: 100%
+      &:nth-of-type(2)
+         float: right
+         width: 51.2820512%
+         +r(1199)
+            margin-top: 20px
+            margin-bottom: 20px
+            width: 100%
+      &:nth-of-type(2) :last-child.calculate__inner-col
+         padding-left: 0
+      &:nth-of-type(2) .calculate__inner
+         padding: 16px 15px 33px 30px
+         +r(767)
+            padding-left: 20px
+            padding-right: 20px
+            padding-bottom: 20px
+   &__sub-title
+      margin-bottom: 20px
+      text-align: left
+      +PTSans-Bold
+      +r(767)
+         font-size: 15px
+   &__title
+      +r(1199)
+         max-width: 80%
+         margin-left: auto
+         margin-right: auto
+      +r(767)
+         max-width: none
+   &__input
+      display: none
+   &__floor
+      width: 33.333333%
+      float: left
+      padding-top: 6px
+      padding-bottom: 1px
+      font-size: 30px
+      text-align: center
+      white-space: nowrap
+      line-height: 30px
+      cursor: pointer
+      +GothamPro-Bold
+      border-left: 2px solid #bababa
+      background-color: #fff
+      +trs
+      +r(767)
+         font-size: 18px
+      &:first-of-type
+         border-left: none
+      &--sm
+         font-size: 12px
+         line-height: 1
+   &__input:checked + .calculate__floor
+      background-color: #a2b333
+      color: #fff
+   &__input:checked + .calculate__label::after
+      transform: scale(1)
+   &__area
+      margin-top: 32px
+      +r(767)
+         margin-top: 16px
+   &__inner
+      padding: 16px 30px 33px
+      border: 1px solid #a2b333
+      +clr
+      +r(767)
+         padding-left: 20px
+         padding-right: 20px
+         padding-bottom: 20px
+   &__inner-col
+      float: left
+      width: 50%
+      text-align: left
+      &:last-of-type
+         padding-left: 30px
+         +r(767)
+            padding-left: 0
+      +r(767)
+         width: 100%
+   &__label
+      display: block
+      position: relative
+      margin-bottom: 13px
+      cursor: pointer
+      +r(767)
+         font-size: 14px
+         margin-bottom: 23px
+      &::before
+         display: inline-block
+         vertical-align: middle
+         margin-right: 7px
+         height: 20px
+         width: 20px
+         border: 1px solid #d1d1d1
+         background-color: #ffffff
+         content: ''
+      &::after
+         position: absolute
+         top: 8px
+         left: 4px
+         +s(checked)
+         content: ''
+         transform: scale(0)
+         +trs
+         +r(767)
+            top: 5px
+   &__btn
+      display: inline-block
+      margin-top: 45px
+      +r(1199)
+         margin-top: 30px
+      +r(767)
+         margin-top: 10px
+   &__popup
+      cursor: auto
+      position: absolute
+      top: 50%
+      right: 50%
+      margin-right: -585px
+      letter-spacing: 0.025em
+      transform: translateY(-50%)
+      width: 360px
+      border-radius: 5px
+      z-index: 200
+      box-shadow: 0 2px 25px rgba(0,0,0, .3), 0 0px 1px #ced4d7
+      +r(1199)
+         margin-right: 0
+         right: 30px
+         width: 520px
+      +r(767)
+         width: auto
+         left: 0
+         right: 0
+      &::after, &::before
+         position: absolute
+         width: 0
+         height: 0
+         border-style: solid
+         content: ''
+         left: 50%
+         transform: translateX(-50%)
+      &::after
+         bottom: -9px
+         border-color: #fff transparent transparent transparent
+         border-width: 12px 15px 0 15px
+      &::before
+         bottom: -11px
+         border-color: #ced4d7 transparent transparent transparent
+         border-width: 12px 15px 0 15px
+      &-inner
+         padding: 20px 40px 20px
+         background-color: #fff
+         border: 1px solid #ced4d7
+         border-radius: 0 0 5px 5px
+         +clr
+         +r(1199)
+            padding-top: 30px
+            padding-bottom: 30px
+      &-text
+         font-size: 15px
+      &-title
+         padding: 15px 40px 15px
+         background-color: #a2b333
+         border-radius: 5px 5px 0 0
+         +PTSans-Bold
+         color: #fff
+         text-align: left
+         +r(1199)
+            padding-top: 25px
+            padding-bottom: 25px
+            font-size: 24px
+         +r(767)
+            font-size: 15px
+      &-input
+         padding: 0 15px
+         height: 30px
+         line-height: 30px
+         width: 100%
+         box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05)
+         border-radius: 2px
+         background-color: rgba(#fdfdfd, .8)
+         border: 1px solid #aaa
+         font-size: 12px
+         color: #bababa
+         +PTSans-Regular
+         +placeholder
+            font-size: 12px
+            +r(1199)
+               font-size: 18px
+         +r(1199)
+            height: 42px
+            line-height: 42px
+            font-size: 18px
+         +r(767)
+            font-size: 15px
+            height: 40px
+            line-height: 40px
+      &-btn
+         float: right
+         margin-top: 15px
+         padding: 8px 24px
+         background-color: #bababa
+         border-radius: 7px
+         font-size: 14px
+         +PTSans-Bold
+         text-transform: none
+         letter-spacing: 0.075em
+         +r(1199)
+            margin-top: 25px
+            font-size: 20px
+         +r(767)
+            width: 210px
+            font-size: 13px
+         &:hover
+            background-color: #797ed4
+         &:active
+            background-color: #4b4f9b
+      &-close
+         position: absolute
+         top: 20px
+         right: 20px
+         cursor: pointer
+         +s(close)
+         transition: all 0.25s
+         &:hover
+            opacity: 0.75
+         +r(1199)
+            transform: scale(1.4)
+            top: 32px
+         +r(767)
+            top: 28px
+            transform: scale(1)
+
+
+// area slider
+.ui-slider-horizontal
+   height: 10px
+   +r(767)
+      height: 5px
+   .ui-slider-handle
+      top: -14px
+      margin-left: -5px
+      cursor: pointer
+      +r(767)
+         top: -7px
+.ui-corner-all
+   border-radius: 0
+.ui-widget.ui-widget-content
+   border: none
+   cursor: pointer
+   .ui-state-default
+      height: 37px
+      width: 9px
+      background-color: #a2b333
+      border-radius: 0
+      border: none
+      &:before
+         content: ''
+         position: absolute
+         left: -10px
+         top: -5px
+         right: -10px
+         bottom: -5px
+         z-index: 1
+      +r(767)
+         height: 19px
+         width: 5px
+.ui-slider-range
+   background-color: #a2b333
+
+.ui-widget input
+   position: absolute
+   bottom: -55px
+   width: 80px
+   height: 50px
+   font-size: 30px
+   color: #000
+   background-color: transparent
+   +GothamPro-Bold
+   +r(767)
+      font-size: 15px
+
+// works section
+
+.works
+   padding: 46px 0 58px
+   +r(767)
+      padding-bottom: 35px
+   &__title
+      +r(767)
+         padding-left: 15px
+         padding-right: 15px
+   &__title--lg
+      font-size: 36px
+      +r(1199)
+         font-size: inherit
+   &__inner
+      margin: 65px 0 0
+      font-size: 0
+      text-align: justify
+      +r(1199)
+         margin-left: -15px
+         margin-right: -15px
+      +r(767)
+         margin-top: 30px
+      &::after
+         display: inline-block
+         width: 100%
+         content: ''
+   &__item
+      display: inline-block
+      vertical-align: top
+      width: 31.623931%
+      margin-bottom: 39px
+      text-align: center
+      +r(767)
+         &:nth-child(3) ~ &
+            display: none
+      +r(1023)
+         width: 50%
+         padding: 0 15px
+      +r(767)
+         width: 100%
+   &__text
+      margin-top: 20px
+      font-size: 18px
+      text-align: left
+      +r(767)
+         margin-top: 10px
+         font-size: 14px
+   &__area
+      display: block
+      +r(767)
+         font-size: 14px
+      &--sm
+         font-size: 12px
+         vertical-align: super
+         +r(767)
+            font-size: 8px
+   &__price
+      +PTSans-Bold
+      +r(767)
+         font-size: 14px
+   &__btn
+      display: inline-block
+      margin-top: 23px
+      padding: 14px 30px
+      +r(767)
+         margin-top: 20px
+   &__more
+      display: none
+      font-size: 15px
+      +PTSans-Bold
+      background-color: transparent
+      +r(767)
+         display: block
+   &__img
+      width: 100%
+      +r(767)
+         max-width: none
+
+// features section
+
+.features
+   padding-top: 88px
+   background: url(../img/bg/features_bg-1.jpg) no-repeat top center/cover
+   +r(1199)
+      padding-top: 50px
+   &.is-mobile
+      display: none
+      padding-top: 0
+      +r(1199)
+         display: block
+      .request-form
+         padding-left: 0
+   &__descr
+      margin-top: 13px
+      font-size: 24px
+      text-align: center
+      +r(767)
+         font-size: 15px
+   &__row
+      max-width: 800px
+      margin: 60px auto 68px
+      font-size: 0
+      +r(767)
+         margin-bottom: 60px
+   &-item
+      display: inline-block
+      vertical-align: top
+      padding: 0 15px
+      width: 33.33333%
+      text-align: center
+      +r(767)
+         width: 100%
+         & + &
+            margin-top: 35px
+         br
+            display: none
+   &-item__pic
+      margin: 0 auto 15px
+      +r(767)
+         margin-bottom: 10px
+      &--1
+         +s(features-1)
+         +r(1023)
+            +s(features-1-hvr)
+         &:hover
+            +s(features-1-hvr)
+      &--2
+         +s(features-2)
+         +r(1023)
+            +s(features-2-hvr)
+         &:hover
+            +s(features-2-hvr)
+      &--3
+         +s(features-3)
+         +r(1023)
+            +s(features-3-hvr)
+         &:hover
+            +s(features-3-hvr)
+   &-item__text
+      font-size: 18px
+      line-height: 1.33
+      +PTSans-Bold
+      +r(767)
+         font-size: 15px
+   &__leader
+      padding: 38px 0 80px
+      background: url(../img/bg/features_bg-2.jpg) no-repeat top center/cover
+      +r(1023)
+         background-position: 39% center
+      +r(767)
+         background-position: 35% center
+      +r(320)
+         background-position: 34% center
+   &.is-mobile &__leader
+      background-image: url(../img/bg/features_bg-3.jpg)
+      background-position: center center
+      background-size: cover
+   &__col
+      max-width: 700px
+      float: right
+      margin-left: 33.33%
+      +r(767)
+         margin-left: 20%
+   &.is-mobile &__col
+      max-width: none
+      margin-left: 0
+   &__leader-text
+      color: #fff
+      line-height: 1.67
+      text-align: left
+      +r(767)
+         font-size: 15px
+   &__leader-descr
+      &--b
+         +PTSans-Bold
+      &--i
+         margin-top: 30px
+         +PTSans-BoldItalic
+   &__request
+      margin-top: 15px
+      +r(1199)
+         display: none
+         &.is-mobile
+            display: block
+   .request-form__btn
+      float: left
+      width: 35%
+      padding-left: 0
+      padding-right: 0
+      height: 60px
+      +r(767)
+         height: auto
+         float: none
+         padding-top: 13px
+         padding-bottom: 14px
+         width: 100%
+   .request-form__style
+      float: left
+      width: 65%
+      padding-right: 30px
+      margin-right: 0
+      max-width: none
+      +r(767)
+         float: none
+         padding-right: 0
+         width: 100%
+
+.request
+   &__text
+      margin-bottom: 28px
+      line-height: 1.67
+      color: #fff
+.request-form
+   font-size: 0
+   +r(1199)
+      width: 100%
+      padding-left: 62px
+   +r(767)
+      padding-left: 0
+   &__style
+      display: inline-block
+      vertical-align: middle
+      position: relative
+      margin-right: 29px
+      max-width: 360px
+      +r(767)
+         max-width: none
+         width: 100%
+         margin-bottom: 16px
+         margin-right: 0
+      &::before
+         position: absolute
+         top: calc(50% - 10px)
+         left: 30px
+         content: ''
+         +s(phone)
+         +r(767)
+            left: 15px
+            margin-top: -2px
+   &__field
+      width: 100%
+      padding: 0 33px 0 74px
+      height: 60px
+      line-height: 60px
+      background-color: #fff
+      +PTSans-Regular
+      font-size: 24px
+      color: #a2a2a2
+      +r(767)
+         font-size: 18px
+         line-height: 42px
+         height: 42px
+         padding-left: 50px
+      +placeholder
+         color: #a2a2a2
+         font-size: 24px
+         +r(767)
+            font-size: 18px
+   &__btn
+      display: inline-block
+      vertical-align: middle
+      padding: 17px 55px
+      font-size: 20px
+      +r(1023)
+         padding-left: 20px
+         padding-right: 20px
+      +r(767)
+         width: 100%
+
+// testimonials section
+
+.testimonials
+   overflow: hidden
+   padding: 50px 0 75px
+   +r(1199)
+      padding-top: 40px
+      padding-bottom: 45px
+   &__descr
+      margin-top: 13px
+      font-size: 24px
+      text-align: center
+      +r(767)
+         font-size: 15px
+         padding-left: 15px
+         padding-right: 15px
+   .slick-list
+      +r(767)
+         overflow: visible !important
+   &__inner
+      margin: 60px -15px 0
+      +r(1199)
+         margin-top: 30px
+      +r(767)
+         overflow: hidden
+         margin-left: 0
+         padding-bottom: 50px
+         padding-right: 15px
+   &__item
+      padding-left: 15px
+      padding-right: 15px
+      +clr
+      +r(767)
+         padding-left: 0
+         padding-right: 5px
+   &__item-left
+      float: left
+      padding-right: 14px
+      width: 50%
+   &__item-pic
+      max-width: 170px
+      margin-bottom: 30px
+      +r(767)
+         max-width: none
+   &__item-img
+      width: 100%
+      max-width: none
+   &__item-text
+      float: left
+      width: 50%
+      +r(767)
+         font-size: 15px
+   &__item-title
+      margin-bottom: 6px
+      line-height: 1
+   &__item-link
+      color: #4470ff
+      text-decoration: none
+      &:visited
+         color: #4470ff
+   &__item-descr
+      margin-top: 13px
+      +r(767)
+         margin-top: 3px
+   &__item-btn
+      display: block
+      padding: 14px 0
+      background-color: #0277c5
+      text-align: center
+      border-radius: 10px
+      &:hover
+         background-color: #045b95
+      &:active
+         background-color: #003355
+   &__arrow
+      position: absolute
+      z-index: 5
+      top: calc(37% - 11px)
+      color: #ef7f1a
+      font-size: 22px
+      cursor: pointer
+      +trs
+      &:hover
+         color: #eb6022
+      &:active
+         color: #c75527
+      &--left
+         left: -12px
+         transform: rotate(-90deg)
+         +r(767)
+            display: none!important
+      &--right
+         right: -10px
+         transform: rotate(90deg)
+         +r(767)
+            top: auto
+            right: 0
+            bottom: -30px
+
+// steps section
+
+.steps
+   padding: 73px 0 62px
+   background-color: #e8e8e8
+   +r(1199)
+      padding-top: 45px
+   +r(767)
+      padding-bottom: 30px
+   &__row
+      margin-top: 40px
+      font-size: 0
+      +clr
+      +r(767)
+         margin-top: 20px
+      &:nth-of-type(1)
+         padding-right: 70px
+         +r(1199)
+            padding-right: 0
+      &:nth-of-type(2)
+         margin-top: 52px
+         margin-left: -15px
+         margin-right: -15px
+         +r(1199)
+            margin-left: 0
+            margin-right: 0
+         +r(767)
+            margin-top: 35px
+   &__item
+      display: inline-block
+      vertical-align: top
+      width: 33.33333%
+      margin-bottom: 57px
+      padding: 0 25px
+      +r(1199)
+         width: 50%
+      +r(767)
+         width: 100%
+         margin-bottom: 35px
+   &__request
+      float: right
+      margin-top: 11px
+      +r(1199)
+         float: left
+      +r(767)
+         margin-top: 0
+         float: none
+      .request-form__btn
+         +r(767)
+            padding-top: 13px
+            padding-bottom: 14px
+      .request-form__field
+         padding: 0 90px 0 57px
+      .request-form__style
+         margin-right: 10px
+         &::before
+            left: 15px
+
+   &__item--first
+      float: left
+      width: 32%
+      margin-bottom: 0
+      padding: 0 20px 0 70px
+      font-size: 0
+      +r(1199)
+         width: auto
+         padding-left: 0
+      .steps__item-number
+         display: inline-block
+         vertical-align: middle
+         position: static
+         margin-right: 19px
+         +r(767)
+            margin-right: 10px
+   &__item-title
+      display: inline-block
+      vertical-align: middle
+      +r(1199)
+         position: relative
+         top: 10px
+   &__item-number
+      position: absolute
+      z-index: 1
+      top: 15px
+      font-size: 100px
+      color: #ef7f1a
+      line-height: 0.74
+      +GothamPro-Bold
+      +r(767)
+         font-size: 50px
+   &__item-title
+      font-size: 24px
+      +PTSans-Bold
+      +r(767)
+         font-size: 15px
+   &__item-pic
+      position: relative
+      width: 231px
+      margin: 0 auto 20px
+      border-radius: 50%
+      transition: all 0.25s
+      +r(767)
+         margin-bottom: 15px
+         width: 140px
+      &:hover
+         box-shadow: 0 0 53.9px 16.1px rgba(255, 255, 255, 0.5)
+   &__item-text
+      font-size: 18px
+      line-height: 1.33
+      text-align: center
+      +r(767)
+         font-size: 15px
+
+// questions section
+
+.questions
+   padding: 75px 0 63px
+   +r(1199)
+      padding-top: 55px
+   +r(767)
+      padding-top: 45px
+      padding-bottom: 40px
+   &__accordion
+      margin-top: 37px
+      +r(767)
+         margin-top: 25px
+
+
+// accordion
+.accordion
+   &__title
+      &.is-active .accordion__title-in
+         background-color: #a2b333
+         color: #fff
+      &.is-active .accordion__inner
+         border-bottom-color: #ef7f1a
+      &.is-active .accordion__icon
+         color: #fff
+         transform: translate(0)
+      & + &
+         margin-top: 40px
+         +r(767)
+            margin-top: 18px
+   &__title-in
+      position: relative
+      padding: 24px 70px 23px 37px
+      border: 1px solid #a2b333
+      border-left: 10px solid #a2b333
+      cursor: pointer
+      +trs
+      +r(1199)
+         padding-left: 14px
+      +r(767)
+         padding: 14px 40px 15px 9px
+         font-size: 12px
+         border-left: 5px solid #a2b333
+   &__inner
+      display: none
+      padding: 25px 35px 25px 39px
+      border: 1px solid #ef7f1a
+      border-left: 10px solid #ef7f1a
+      border-top: none
+      box-shadow: 0 1px 13px rgba(0, 0, 1, 0.25)
+      +r(1199)
+         padding-left: 14px
+      +r(767)
+         padding: 14px 40px 15px 9px
+         font-size: 12px
+         border-left: 5px solid #ef7f1a
+   &__content
+      line-height: 1.44
+      +r(767)
+         font-size: 12px
+      &--color
+         color: #ef7f1a
+   &__icon
+      position: absolute
+      right: 19px
+      top: calc(50% - 12px)
+      color: #a2b333
+      font-size: 24px
+      transform: rotate(180deg)
+      +trs
+      +r(767)
+         font-size: 16px
+         right: 11px
+         top: calc(50% - 8px)
+
+// ask section
+
+.ask
+   padding: 70px 0 80px
+   background: url(../img/bg/ask_bg.jpg) no-repeat top center/cover
+   color: #fff
+   +r(1199)
+      padding-top: 50px
+      padding-bottom: 60px
+      background-position: 35% center
+   +r(767)
+      padding-top: 30px
+      height: 310px
+   &.is-mobile
+      display: none
+      background-image: url(../img/bg/features_bg-3.jpg)
+      background-position: center center
+      background-size: cover
+      +r(1199)
+         display: block
+         height: auto
+   &__col
+      float: right
+      width: 670px
+      +r(1199)
+         max-width: 55%
+         width: 100%
+         &:nth-child(1)
+            max-width: none
+            text-align: center
+            margin-bottom: 20px
+      +r(767)
+         max-width: none
+   &__title
+      margin-bottom: 20px
+      font-size: 30px
+      +GothamPro-Bold
+      +r(767)
+         margin-bottom: 10px
+         font-size: 18px
+   &__descr
+      margin-bottom: 20px
+      font-size: 24px
+      +r(767)
+         font-size: 15px
+         text-indent: 60px
+   &__question
+      padding: 20px 30px
+      height: 150px
+      width: 100%
+      font-size: 24px
+      +PTSans-Regular
+      color: #b0b0b0
+      resize: none
+      +r(767)
+         padding: 10px 12px
+         font-size: 18px
+         margin-left: 35%
+         width: 65%
+      &:focus
+         border: 1px solid #ef7f1a
+         box-shadow: 0 3px 5.7px 0.3px rgba(0, 0, 0, 0.2)
+   &__request
+      margin: 30px 0 28px
+      .request-form__style
+         +r(1199)
+            width: 100%
+            margin-right: 0
+            max-width: none
+      .request-form__btn
+         padding: 17px 82px
+         +r(1199)
+            margin-top: 20px
+         +r(767)
+            margin-top: 0
+   .request-form__btn
+      float: left
+      width: 35%
+      padding-left: 0
+      padding-right: 0
+      height: 60px
+      +r(1199)
+         width: 55%
+      +r(767)
+         height: auto
+         padding-top: 13px
+         padding-bottom: 14px
+         float: none
+         width: 100%
+   .request-form__style
+      float: left
+      width: 65%
+      padding-right: 30px
+      margin-right: 0
+      max-width: none
+      +r(1199)
+         padding-right: 0
+      +r(767)
+         float: none
+         width: 100%
+   &__text
+      margin-bottom: 10px
+      font-size: 24px
+      +r(767)
+         font-size: 15px
+   &.is-mobile &__text
+      margin-bottom: 25px
+      +r(767)
+         margin-bottom: 15px
+   &__form
+      margin-bottom: 40px
+   &__number
+      text-decoration: none
+      color: #fff
+      font-size: 36px
+      +GothamPro-Bold
+      +r(767)
+         font-size: 21px
+   .request-form
+      padding-left: 0
+      +clr
+   &__call
+      +r(1199)
+         display: none
+         &.is-mobile
+            display: block
+            text-align: center
+
+// contact section
+
+.contact
+   position: relative
+   &__inner
+      max-width: 400px
+      position: absolute
+      top: 0
+      left: 50%
+      margin-left: -585px
+      bottom: 0
+      z-index: 100
+      background-color: rgba(#fff, 0.8)
+      +r(1199)
+         position: relative
+         margin-left: 0
+         left: auto
+         right: auto
+         top: auto
+         bottom: auto
+         max-width: none
+      +r(767)
+         padding-bottom: 15px
+      &:before
+         position: absolute
+         z-index: 1
+         content: ''
+         right: 100%
+         top: 0
+         bottom: 0
+         width: 4000px
+         background-color: rgba(#fff, 0.8)
+   &__col
+      float: right
+      max-width: 690px
+      margin-bottom: 50px
+      +r(1199)
+         padding-left: 30px
+         padding-top: 40px
+         max-width: none
+         float: none
+         margin-right: 360px
+         min-height: 190px
+      +r(767)
+         margin-right: 0
+         padding: 5px 15px 20px
+         min-height: 0
+         margin-bottom: 0
+   #vk_groups
+      +r(1199)
+         position: absolute
+         z-index: 1
+         right: 30px
+         top: 120px
+      +r(767)
+         position: relative
+         right: auto
+         top: auto
+         margin-left: 15px
+   &__title
+      position: relative
+      z-index: 2
+      margin-bottom: 14px
+      padding: 32px 0
+      text-align: left
+      background-color: #e8e8e8
+      +r(1199)
+         padding-left: 30px
+         padding-right: 30px
+      +r(767)
+         padding: 25px 15px
+      &:before
+         content: ''
+         position: absolute
+         z-index: 2
+         pointer-events: none
+         right: 100%
+         top: 0
+         bottom: 0
+         background-color: #e8e8e8
+         width: 4000px
+   &__address
+      margin-bottom: 10px
+      font-size: 24px
+      line-height: 1.5
+      +r(767)
+         margin-bottom: 5px
+         font-size: 18px
+   &__number
+      font-size: 24px
+      +GothamPro-Bold
+      color: #000
+      text-decoration: none
+      +r(767)
+         font-size: 18px
+   &__map
+      position: relative
+      z-index: 50
+      height: 550px
+      +r(1199)
+         height: 340px
+
+
+
+//***=== FOOTER ===***//
+
+.footer
+   padding: 22px 0 33px
+   background-color: #062b17
+   +r(479)
+      text-align: center
+   &__logo
+      float: left
+      margin-top: 8px
+      +r(479)
+         float: none
+         display: inline-block
+         margin-top: 0
+         .logo__img
+            width: 100%
+   &__number
+      float: left
+      margin: 23px 0 0 60px
+      font-size: 24px
+      color: #fff
+      text-decoration: none
+      +GothamPro-Bold
+      +r(479)
+         float: none
+         margin-left: 0
+         display: block
+
+.scroll-top
+   position: relative
+   float: right
+   display: block
+   height: 80px
+   width: 80px
+   background-color: rgba(#fff, .25)
+   border-radius: 50%
+   cursor: pointer
+   transition: all 0.25s
+   +r(767)
+      width: 70px
+      height: 70px
+   +r(479)
+      float: none
+      display: inline-block
+      margin-top: 20px
+   &:hover
+      background-color: rgba(#fff, .35)
+   &:active
+      background-color: rgba(#fff, .5)
+   &__icon
+      font-size: 39px
+      color: #fff
+      +vcenter
+      margin-top: -2px
+      
+
+/* ===================================
+	 Map
+	 =================================== */
+*[class*="controls__control"]
+   left: auto !important
+   right: 10px !important
+
+/* ===================================
+	 Hambruger
+	 =================================== */
+.hamburger
+   display: none
+   position: relative
+   z-index: 101
+   margin-top: 20px
+   float: left
+   pointer-events: auto
+   -webkit-tap-highlight-color: transparent
+   cursor: pointer
+   transition-property: opacity, -webkit-filter
+   transition-property: opacity, filter
+   transition-property: opacity, filter, -webkit-filter
+   transition-duration: 0.15s
+   transition-timing-function: linear
+   font: inherit
+   color: inherit
+   text-transform: none
+   background-color: transparent
+   border: 0
+   overflow: visible
+   transition: all 0.5s
+   +r(767)
+      display: block
+   &__box
+      width: 35px
+      height: 30px
+      display: block
+      position: relative
+   &__inner
+      display: block
+      top: 50%
+      margin-top: -1px
+      width: 35px
+      height: 5px
+      background-color: #fff
+      position: absolute
+      transition-property: -webkit-transform
+      transition-property: transform
+      transition-property: transform, -webkit-transform
+      transition-duration: 0.15s
+      transition-timing-function: ease
+      &::before, &::after
+         width: 35px
+         height: 5px
+         background-color: #fff
+         position: absolute
+         transition-property: -webkit-transform
+         transition-property: transform
+         transition-property: transform, -webkit-transform
+         transition-duration: 0.15s
+         transition-timing-function: ease
+      &::before, &::after
+         content: ""
+         display: block
+      &::before
+         top: -11px
+      &::after
+         bottom: -11px
+   &.is-active &__inner
+      background-color: #fff
+   &.is-active &__inner:before,
+   &.is-active &__inner:after
+      background-color: #fff
+   &_spin &__inner
+      transition-duration: 0.3s
+      transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19)
+      &::before
+         transition: top 0.1s 0.34s ease-in, opacity 0.1s ease-in
+      &::after
+         transition: bottom 0.1s 0.34s ease-in, -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+         transition: bottom 0.1s 0.34s ease-in, transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+         transition: bottom 0.1s 0.34s ease-in, transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+   &.is-active &__inner
+      -webkit-transform: rotate(225deg)
+      transform: rotate(225deg)
+      transition-delay: 0.14s
+      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+      &::before
+         top: 0
+         opacity: 0
+         transition: top 0.1s ease-out, opacity 0.1s 0.14s ease-out
+      &::after
+         bottom: 0
+         -webkit-transform: rotate(-90deg)
+         transform: rotate(-90deg)
+         transition: bottom 0.1s ease-out, -webkit-transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1)
+         transition: bottom 0.1s ease-out, transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1)
+         transition: bottom 0.1s ease-out, transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1)

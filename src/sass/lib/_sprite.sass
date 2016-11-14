@@ -1,0 +1,107 @@
+$icons: (0:0)
+$icons: map-merge($icons,(arrow_down: (X: 0px, Y:-202px, W: 39px, H: 24px, TW: 313px, TH: 226px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(checked: (X: -219px, Y:-129px, W: 13px, H: 11px, TW: 313px, TH: 226px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(close: (X: -202px, Y:-129px, W: 13px, H: 13px, TW: 313px, TH: 226px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(features-1-hvr: (X: 0px, Y:0px, W: 118px, H: 97px, TW: 313px, TH: 226px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(features-1: (X: -122px, Y:0px, W: 118px, H: 97px, TW: 313px, TH: 226px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(features-2-hvr: (X: -244px, Y:0px, W: 69px, H: 96px, TW: 313px, TH: 226px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(features-2: (X: -244px, Y:-100px, W: 69px, H: 96px, TW: 313px, TH: 226px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(features-3-hvr: (X: 0px, Y:-101px, W: 97px, H: 97px, TW: 313px, TH: 226px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(features-3: (X: -101px, Y:-101px, W: 97px, H: 97px, TW: 313px, TH: 226px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(phone: (X: -202px, Y:-101px, W: 24px, H: 24px, TW: 313px, TH: 226px, IMG: '../img/icons.png')))
+
+
+// Gets an attribute from the sass map
+@function icon-attr($icon, $attr)
+	$icon: map-get($icons, $icon)
+	@return map-get($icon, $attr)
+
+@mixin sprite($iconName)
+	background-image: url(icon-attr($iconName, IMG))
+	width: icon-attr($iconName, W)
+	height: icon-attr($iconName, H)
+	background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-position($iconName)
+	background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-retina($iconName)
+	background-image: url(icon-attr($iconName, IMG))
+	$width: icon-attr($iconName, W)
+	$height: icon-attr($iconName, H)
+	width: $width/2
+	height: $height/2
+	$x: icon-attr($iconName, X)
+	$y: icon-attr($iconName, Y)
+	background-position: $x/2 $y/2
+	$tw: icon-attr($iconName, TW) 	
+	$th: icon-attr($iconName, TH)
+	background-size: $tw/2 $th/2  	
+
+
+@mixin s($i)
+	+sprite($i)
+@mixin sp($i)
+	+sprite-position($i)
+@mixin sr($i)
+	+sprite-retina($i)	
+
+//
+//.icon-arrow_down
+//	width: 39px
+//	height: 24px
+//	background-image: url('../img/icons.png')
+//	background-position: 0px -202px
+//
+//.icon-checked
+//	width: 13px
+//	height: 11px
+//	background-image: url('../img/icons.png')
+//	background-position: -219px -129px
+//
+//.icon-close
+//	width: 13px
+//	height: 13px
+//	background-image: url('../img/icons.png')
+//	background-position: -202px -129px
+//
+//.icon-features-1-hvr
+//	width: 118px
+//	height: 97px
+//	background-image: url('../img/icons.png')
+//	background-position: 0px 0px
+//
+//.icon-features-1
+//	width: 118px
+//	height: 97px
+//	background-image: url('../img/icons.png')
+//	background-position: -122px 0px
+//
+//.icon-features-2-hvr
+//	width: 69px
+//	height: 96px
+//	background-image: url('../img/icons.png')
+//	background-position: -244px 0px
+//
+//.icon-features-2
+//	width: 69px
+//	height: 96px
+//	background-image: url('../img/icons.png')
+//	background-position: -244px -100px
+//
+//.icon-features-3-hvr
+//	width: 97px
+//	height: 97px
+//	background-image: url('../img/icons.png')
+//	background-position: 0px -101px
+//
+//.icon-features-3
+//	width: 97px
+//	height: 97px
+//	background-image: url('../img/icons.png')
+//	background-position: -101px -101px
+//
+//.icon-phone
+//	width: 24px
+//	height: 24px
+//	background-image: url('../img/icons.png')
+//	background-position: -202px -101px
+//
