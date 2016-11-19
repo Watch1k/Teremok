@@ -66,19 +66,19 @@
 						<div class="calculate__inner">
 							<div class="calculate__sub-title">Материал</div>
 							<div class="calculate__inner-col">
-								<input class="calculate__input" id="check-1" type="checkbox">
+								<input class="calculate__input" id="check-1" type="radio" name="radioButton">
 								<label class="calculate__label" for="check-1">Подскажите мне материал</label>
-								<input class="calculate__input" id="check-2" type="checkbox">
+								<input class="calculate__input" id="check-2" type="radio" name="radioButton">
 								<label class="calculate__label" for="check-2">Бревно ручной рубки</label>
-								<input class="calculate__input" id="check-3" type="checkbox">
+								<input class="calculate__input" id="check-3" type="radio" name="radioButton">
 								<label class="calculate__label" for="check-3">Брус естественной влажности</label>
 							</div>
 							<div class="calculate__inner-col">
-								<input class="calculate__input" id="check-4" type="checkbox">
+								<input class="calculate__input" id="check-4" type="radio" name="radioButton">
 								<label class="calculate__label" for="check-4">Оцилиндрованное бревно</label>
-								<input class="calculate__input" id="check-5" type="checkbox">
+								<input class="calculate__input" id="check-5" type="radio" name="radioButton">
 								<label class="calculate__label" for="check-5">Профилированный брус</label>
-								<input class="calculate__input" id="check-6" type="checkbox">
+								<input class="calculate__input" id="check-6" type="radio" name="radioButton">
 								<label class="calculate__label" for="check-6">Другое</label>
 							</div>
 						</div>
@@ -121,7 +121,7 @@
 							<div class="works__area">Площадь: 160 м<span class="works__area--sm">2</span></div>
 							<div class="works__price">Итоговая стоимость: 540 тыс. ₽</div>
 						</div>
-						<a class="works__btn btn js-popup-open" href="#0" data-href="modal_call">Хочу так же!</a>
+						<a class="works__btn btn js-popup-open" href="#0" data-href="modal_recall">Хочу так же!</a>
 					</div>
 					<div class="works__item">
 						<div class="works__pic">
@@ -132,7 +132,7 @@
 							<div class="works__area">Площадь: 204 м<span class="works__area--sm">2</span></div>
 							<div class="works__price">Итоговая стоимость: 1296 тыс. ₽</div>
 						</div>
-						<a class="works__btn btn js-popup-open" href="#0" data-href="modal_call">Хочу так же!</a>
+						<a class="works__btn btn js-popup-open" href="#0" data-href="modal_recall">Хочу так же!</a>
 					</div>
 					<div class="works__item">
 						<div class="works__pic">
@@ -143,7 +143,7 @@
 							<div class="works__area">Площадь: 64 м<span class="works__area--sm">2</span></div>
 							<div class="works__price">Итоговая стоимость: 194 тыс. ₽</div>
 						</div>
-						<a class="works__btn btn js-popup-open" href="#0" data-href="modal_call">Хочу так же!</a>
+						<a class="works__btn btn js-popup-open" href="#0" data-href="modal_recall">Хочу так же!</a>
 					</div>
 					<div class="works__item">
 						<div class="works__pic">
@@ -154,7 +154,7 @@
 							<div class="works__area">Площадь: 82 м<span class="works__area--sm">2</span></div>
 							<div class="works__price">Итоговая стоимость: 324 тыс. ₽</div>
 						</div>
-						<a class="works__btn btn js-popup-open" href="#0" data-href="modal_call">Хочу так же!</a>
+						<a class="works__btn btn js-popup-open" href="#0" data-href="modal_recall">Хочу так же!</a>
 					</div>
 					<div class="works__item">
 						<div class="works__pic">
@@ -165,7 +165,7 @@
 							<div class="works__area">Площадь: 210 м<span class="works__area--sm">2</span></div>
 							<div class="works__price">Итоговая стоимость: 1024 тыс. ₽</div>
 						</div>
-						<a class="works__btn btn js-popup-open" href="#0" data-href="modal_call">Хочу так же!</a>
+						<a class="works__btn btn js-popup-open" href="#0" data-href="modal_recall">Хочу так же!</a>
 					</div>
 					<div class="works__item">
 						<div class="works__pic">
@@ -176,7 +176,7 @@
 							<div class="works__area">Площадь: 4 м<span class="works__area--sm">2</span></div>
 							<div class="works__price">Итоговая стоимость: 65 тыс. ₽</div>
 						</div>
-						<a class="works__btn btn js-popup-open" href="#0" data-href="modal_call">Хочу так же!</a>
+						<a class="works__btn btn js-popup-open" href="#0" data-href="modal_recall">Хочу так же!</a>
 					</div>
 				</div>
 				<button class="works__more js-works-more" type="button">ПОКАЗАТЬ ЕЩЁ ></button>
@@ -213,7 +213,7 @@
 							<p class="request__text">Оставьте заявку и я сам перезвоню Вам, бесплатно расскажу и проконсультирую, какой дом подойдет именно для Вас</p>
 							<form class="request-form js-calculate-form">
 								<div class="request-form__style">
-									<input class="request-form__field" type="text" name="Номер телефона" placeholder="Введите номер" required>
+									<input class="request-form__field js-phone-mask" type="text" name="Номер телефона" placeholder="Введите номер" required>
 								</div>
 								<button class="request-form__btn btn" type="submit" name="send request">Оставить заявку</button>
 								<input type="hidden" name="project_name" value="Русский Терем">
@@ -230,10 +230,11 @@
 				<div class="container">
 					<div class="features__col">
 						<div class="features__request is-mobile">
+							<p class="features__leader-descr features__leader-descr--i is-mod">Возможно, Вам тяжело определиться с материалом для дома, подрядчиком, технологией строительства или чем-то еще.</p>
 							<p class="request__text">Оставьте заявку и я сам перезвоню Вам, <b>бесплатно</b> расскажу и проконсультирую, какой дом подойдет именно для Вас</p>
 							<form class="request-form js-calculate-form">
 								<div class="request-form__style">
-									<input class="request-form__field" type="text" name="Номер телефона" placeholder="Введите номер" required>
+									<input class="request-form__field js-phone-mask" type="text" name="Номер телефона" placeholder="Введите номер" required>
 								</div>
 								<button class="request-form__btn btn" type="submit" name="send request">Оставить заявку</button>
 								<input type="hidden" name="project_name" value="Русский Терем">
@@ -246,6 +247,16 @@
 			</div>
 		</section>
 		<section id="testimonials" class="testimonials">
+			<div class="container video">
+				<h2 class="testimonials__title">Видео нашей работы</h2>
+				<p class="testimonials__descr">Мы действительно заботимся о качестве</p>
+				<div class="testimonials__video is-youtube">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/Uag0Ws4zfnM" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div class="testimonials__video is-youtube">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/Uag0Ws4zfnM" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</div>
 			<div class="container">
 				<h2 class="testimonials__title">Реальные отзывы от реальных людей</h2>
 				<p class="testimonials__descr">Каждому из них можно написать и задать вопросы</p>
@@ -256,12 +267,12 @@
 								<div class="testimonials__item-pic">
 									<img class="testimonials__item-img" src="img/content/testimonial-1.jpg" alt="Виктор Таринов">
 								</div>
-								<a class="testimonials__item-btn btn" href="#0">Подробнее</a>
+								<a class="testimonials__item-btn btn js-init-more" href="#0">Подробнее</a>
 							</div>
 							<div class="testimonials__item-text">
 								<div class="testimonials__item-title">Виктор Таринов</div>
-								<a class="testimonials__item-link" href="#0">vk.com/dssdvs</a>
-								<p class="testimonials__item-descr">Ребята из Русского терема строили дом другу, ему все понравилось. Он посоветовал мне и они построили дачу, баню. Вся наша семья рада этим постройкам...</p>
+								<a class="testimonials__item-link" href="https://vk.com/dssdvs" target="_blank">vk.com/dssdvs</a>
+								<p class="testimonials__item-descr">Ребята из Русского терема строили дом другу, ему все понравилось. Он посоветовал мне и они построили дачу, баню. Вся наша семья рада этим постройкам... <span class="testimonials__item-descr-hidden js-more"> Версия Цицерона Liber Primus Версия Цицерона Liber Primus Версия Цицерона Liber Primus (Первая Книга), разделы 1.10.32–3 (фрагменты добавлены в большую часть Lorem ipsum красным цветом)</span></p>
 							</div>
 						</div>
 						<div class="testimonials__item">
@@ -269,12 +280,12 @@
 								<div class="testimonials__item-pic">
 									<img class="testimonials__item-img" src="img/content/testimonial-2.jpg" alt="Дмитрий Власов">
 								</div>
-								<a class="testimonials__item-btn btn" href="#0">Подробнее</a>
+								<a class="testimonials__item-btn btn js-init-more" href="#0">Подробнее</a>
 							</div>
 							<div class="testimonials__item-text">
 								<div class="testimonials__item-title">Дмитрий Власов</div>
-								<a class="testimonials__item-link" href="#0">vk.com/dssdvs</a>
-								<p class="testimonials__item-descr">Наш загородный дом построен командой из "Русского терема", понравилась организация и качество работ. Сделали все, вплоть до подведения ...</p>
+								<a class="testimonials__item-link" href="https://vk.com/dssdvs" target="_blank">vk.com/dssdvs</a>
+								<p class="testimonials__item-descr">Наш загородный дом построен командой из "Русского терема", понравилась организация и качество работ. Сделали все, вплоть до подведения ... <span class="testimonials__item-descr-hidden js-more">В ерсия Цицерона Liber Primus ерсия Цицерона Liber Primus ерсия Цицерона Liber Primus (Первая Книга), разделы 1.10.32–3 (фрагменты добавлены в большую часть Lorem ipsum красным цветом)</span></p>
 							</div>
 						</div>
 						<div class="testimonials__item">
@@ -282,12 +293,12 @@
 								<div class="testimonials__item-pic">
 									<img class="testimonials__item-img" src="img/content/testimonial-3.jpg" alt="Руслан Зорин">
 								</div>
-								<a class="testimonials__item-btn btn" href="#0">Подробнее</a>
+								<a class="testimonials__item-btn btn js-init-more" href="#0">Подробнее</a>
 							</div>
 							<div class="testimonials__item-text">
 								<div class="testimonials__item-title">Руслан Зорин</div>
-								<a class="testimonials__item-link" href="#0">vk.com/dssdvs</a>
-								<p class="testimonials__item-descr">Заказывал постройку бани, построили настоящую баню-теремок, все отлично. Спасибо, Русский терем!</p>
+								<a class="testimonials__item-link" href="https://vk.com/dssdvs" target="_blank">vk.com/dssdvs</a>
+								<p class="testimonials__item-descr">Заказывал постройку бани, построили настоящую баню-теремок, все отлично. Спасибо, Русский терем! <span class="testimonials__item-descr-hidden js-more"> Версия Цицерона Liber Primus Версия Цицерона Liber Primus Версия Цицерона Liber Primus (Первая Книга), разделы 1.10.32–3 (фрагменты добавлены в большую часть Lorem ipsum красным цветом)</span></p>
 							</div>
 						</div>
 						<div class="testimonials__item">
@@ -295,12 +306,12 @@
 								<div class="testimonials__item-pic">
 									<img class="testimonials__item-img" src="img/content/testimonial-1.jpg" alt="Виктор Таринов">
 								</div>
-								<a class="testimonials__item-btn btn" href="#0">Подробнее</a>
+								<a class="testimonials__item-btn btn js-init-more" href="#0">Подробнее</a>
 							</div>
 							<div class="testimonials__item-text">
 								<div class="testimonials__item-title">Виктор Таринов</div>
-								<a class="testimonials__item-link" href="#0">vk.com/dssdvs</a>
-								<p class="testimonials__item-descr">Ребята из Русского терема строили дом другу, ему все понравилось. Он посоветовал мне и они построили дачу, баню. Вся наша семья рада этим постройкам...</p>
+								<a class="testimonials__item-link" href="https://vk.com/dssdvs" target="_blank">vk.com/dssdvs</a>
+								<p class="testimonials__item-descr">Ребята из Русского терема строили дом другу, ему все понравилось. Он посоветовал мне и они построили дачу, баню. Вся наша семья рада этим постройкам... <span class="testimonials__item-descr-hidden js-more"> Версия Цицерона Liber Primus Версия Цицерона Liber Primus Версия Цицерона Liber Primus (Первая Книга), разделы 1.10.32–3 (фрагменты добавлены в большую часть Lorem ipsum красным цветом)</span></p>
 							</div>
 						</div>
 						<div class="testimonials__item">
@@ -308,12 +319,12 @@
 								<div class="testimonials__item-pic">
 									<img class="testimonials__item-img" src="img/content/testimonial-2.jpg" alt="Дмитрий Власов">
 								</div>
-								<a class="testimonials__item-btn btn" href="#0">Подробнее</a>
+								<a class="testimonials__item-btn btn js-init-more" href="#0">Подробнее</a>
 							</div>
 							<div class="testimonials__item-text">
 								<div class="testimonials__item-title">Дмитрий Власов</div>
-								<a class="testimonials__item-link" href="#0">vk.com/dssdvs</a>
-								<p class="testimonials__item-descr">Наш загородный дом построен командой из "Русского терема", понравилась организация и качество работ. Сделали все, вплоть до подведения ...</p>
+								<a class="testimonials__item-link" href="https://vk.com/dssdvs" target="_blank">vk.com/dssdvs</a>
+								<p class="testimonials__item-descr">Наш загородный дом построен командой из "Русского терема", понравилась организация и качество работ. Сделали все, вплоть до подведения ... <span class="testimonials__item-descr-hidden js-more">В ерсия Цицерона Liber Primus ерсия Цицерона Liber Primus ерсия Цицерона Liber Primus (Первая Книга), разделы 1.10.32–3 (фрагменты добавлены в большую часть Lorem ipsum красным цветом)</span></p>
 							</div>
 						</div>
 						<div class="testimonials__item">
@@ -321,12 +332,12 @@
 								<div class="testimonials__item-pic">
 									<img class="testimonials__item-img" src="img/content/testimonial-3.jpg" alt="Руслан Зорин">
 								</div>
-								<a class="testimonials__item-btn btn" href="#0">Подробнее</a>
+								<a class="testimonials__item-btn btn js-init-more" href="#0">Подробнее</a>
 							</div>
 							<div class="testimonials__item-text">
 								<div class="testimonials__item-title">Руслан Зорин</div>
-								<a class="testimonials__item-link" href="#0">vk.com/dssdvs</a>
-								<p class="testimonials__item-descr">Заказывал постройку бани, построили настоящую баню-теремок, все отлично. Спасибо, Русский терем!</p>
+								<a class="testimonials__item-link" href="https://vk.com/dssdvs" target="_blank">vk.com/dssdvs</a>
+								<p class="testimonials__item-descr">Заказывал постройку бани, построили настоящую баню-теремок, все отлично. Спасибо, Русский терем! <span class="testimonials__item-descr-hidden js-more"> Версия Цицерона Liber Primus Версия Цицерона Liber Primus Версия Цицерона Liber Primus (Первая Книга), разделы 1.10.32–3 (фрагменты добавлены в большую часть Lorem ipsum красным цветом)</span></p>
 							</div>
 						</div>
 					</div>
@@ -344,7 +355,7 @@
 					<div class="steps__request request">
 						<form class="request-form js-calculate-form">
 							<div class="request-form__style">
-								<input class="request-form__field" type="text" name="Номер телефона" placeholder="Введите номер" required>
+								<input class="request-form__field js-phone-mask" type="text" name="Номер телефона" placeholder="Введите номер" required>
 							</div>
 							<button class="request-form__btn btn" type="submit" name="send request">Оставить заявку</button>
 							<input type="hidden" name="project_name" value="Русский Терем">

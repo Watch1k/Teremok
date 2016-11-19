@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
 	initSubmit();
+	initPhoneMask();
 
 	(function () {
 		var toggleBtn = $('.js-hamburger'),
@@ -64,7 +65,7 @@ $(document).ready(function () {
 			range: "min",
 			value: 42,
 			min: 1,
-			max: 99,
+			max: 300,
 			slide: function (event, ui) {
 				sldOutput.val(ui.value);
 			}
@@ -94,6 +95,7 @@ $(document).ready(function () {
 					popupClose = $('.js-popup-close');
 
 				popup.fadeIn();
+				initPhoneMask();
 				popupClose.on('click', function(){
 					$(this).closest(popup).fadeOut(function() {
 						$('body').removeClass('is-locked');
@@ -216,6 +218,8 @@ $(document).ready(function () {
 			speed: 900,
 			slidesToShow: 3,
 			slidesToScroll: 1,
+			// autoplay: true,
+			// autoplaySpeed: 5000,
 			appendArrows: $(".js-carousel"),
 			prevArrow: '<i class="testimonials__arrow testimonials__arrow--left icon-acc_arrow"></i>',
 			nextArrow: '<i class="testimonials__arrow testimonials__arrow--right icon-acc_arrow"></i>',
@@ -238,7 +242,7 @@ $(document).ready(function () {
 	})();
 
 	(function () {
-		var myLatLng = [59.177373, 39.975199];
+		var myLatLng = [59.167033, 39.971940];
 		ymaps.ready(init);
 		var myMap;
 
@@ -275,6 +279,48 @@ $(document).ready(function () {
 			$(this).remove();
 		});
 	})();
+
+	(function () {
+		var moreBtn = $('.js-init-more'),
+			moreEl = $('.js-more');
+
+		moreBtn.on('click', function (e) {
+			e.preventDefault();
+			var text = $(this).text();
+			$(this).text(text == "Подробнее" ? "Скрыть" : "Подробнее");
+			$(this).closest('.testimonials__item').find(moreEl).toggleClass('is-active');
+		});
+	})();
+
+	function initPhoneMask(){
+		var phoneInput = $(".js-phone-mask");
+
+		phoneInput.mask("+9(999)999-99-99");
+
+		//SET CURSOR POSITION
+		$.fn.setCursorPosition = function(pos) {
+			this.each(function(index, elem) {
+				if (elem.setSelectionRange) {
+					elem.setSelectionRange(pos, pos);
+				} else if (elem.createTextRange) {
+					var range = elem.createTextRange();
+					range.collapse(true);
+					range.moveEnd('character', pos);
+					range.moveStart('character', pos);
+					range.select();
+				}
+			});
+			return this;
+		};
+
+		phoneInput.on('focus', function(){
+			var _this = $(this);
+
+			setTimeout(function() {
+				_this.setCursorPosition(1);
+			},100);
+		});
+	}
 
 	(function () {
 		VK.Widgets.Group("vk_groups", {mode: 3, width: "300"}, 69448292);

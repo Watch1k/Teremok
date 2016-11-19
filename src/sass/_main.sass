@@ -222,20 +222,21 @@
       padding: 45px 0 40px
    &__output
       top: 100% !important
-      left: -40px !important
+      left: -50px !important
       +r(767)
-         left: -20px!important
+         left: -45px!important
    &__sup
       position: absolute
       top: 100%
       margin-top: 8px
-      left: 10px
+      left: 20px
       height: 50px
       +GothamPro-Bold
       font-size: 30px
       color: #000
       background-color: transparent
       +r(767)
+         left: 10px
          margin-top: 15px
          font-size: 15px
       sup
@@ -386,47 +387,28 @@
       cursor: auto
       position: absolute
       top: 50%
-      right: 50%
-      margin-right: -585px
+      left: 50%
       letter-spacing: 0.025em
-      transform: translateY(-50%)
+      transform: translateX(-50%) translateY(-50%)
       width: 360px
-      border-radius: 5px
+      border-radius: 5px 5px 0 0
       z-index: 200
       box-shadow: 0 2px 25px rgba(0,0,0, .3), 0 0px 1px #ced4d7
       +r(1199)
-         margin-right: 0
-         right: 30px
          width: 520px
       +r(767)
-         width: auto
-         left: 0
-         right: 0
-      &::after, &::before
-         position: absolute
-         width: 0
-         height: 0
-         border-style: solid
-         content: ''
-         left: 50%
-         transform: translateX(-50%)
-      &::after
-         bottom: -9px
-         border-color: #fff transparent transparent transparent
-         border-width: 12px 15px 0 15px
-      &::before
-         bottom: -11px
-         border-color: #ced4d7 transparent transparent transparent
-         border-width: 12px 15px 0 15px
+         width: 100%
       &-inner
          padding: 20px 40px 20px
          background-color: #fff
          border: 1px solid #ced4d7
-         border-radius: 0 0 5px 5px
          +clr
          +r(1199)
             padding-top: 30px
             padding-bottom: 30px
+         +r(767)
+            padding-left: 30px
+            padding-right: 30px
       &-text
          font-size: 15px
       &-title
@@ -441,7 +423,10 @@
             padding-bottom: 25px
             font-size: 24px
          +r(767)
-            font-size: 15px
+            padding-top: 17px
+            padding-bottom: 17px
+            padding-left: 30px
+            font-size: 20px
       &-input
          padding: 0 15px
          height: 30px
@@ -480,7 +465,8 @@
             margin-top: 25px
             font-size: 20px
          +r(767)
-            width: 210px
+            width: 100%
+            margin-top: 15px
             font-size: 13px
          &:hover
             background-color: #797ed4
@@ -499,8 +485,8 @@
             transform: scale(1.4)
             top: 32px
          +r(767)
-            top: 28px
-            transform: scale(1)
+            top: 23px
+            transform: scale(1.2)
 
 
 // area slider
@@ -548,6 +534,7 @@
    color: #000
    background-color: transparent
    +GothamPro-Bold
+   text-align: center
    +r(767)
       font-size: 15px
 
@@ -702,13 +689,13 @@
       +r(1023)
          background-position: 39% center
       +r(767)
-         background-position: 35% center
+         background-position: 37% center
       +r(320)
-         background-position: 34% center
+         background-position: 35% center
    &.is-mobile &__leader
-      background-image: url(../img/bg/features_bg-3.jpg)
-      background-position: center center
-      background-size: cover
+      background: #035
+      padding-top: 25px
+      padding-bottom: 55px
    &__col
       max-width: 700px
       float: right
@@ -730,12 +717,26 @@
       &--i
          margin-top: 30px
          +PTSans-BoldItalic
+         +r(767)
+            display: none
+         &.is-mod
+            display: none
+            margin-top: 0
+            margin-bottom: 30px
+            color: #ffffff
+            line-height: 1.6
+            +r(767)
+               display: block
    &__request
       margin-top: 15px
       +r(1199)
          display: none
          &.is-mobile
             display: block
+            font-size: 24px
+      +r(767)
+         &.is-mobile
+            font-size: 15px
    .request-form__btn
       float: left
       width: 35%
@@ -835,8 +836,8 @@
       text-align: center
       +r(767)
          font-size: 15px
-         padding-left: 15px
-         padding-right: 15px
+         padding-left: 10px
+         padding-right: 10px
    .slick-list
       +r(767)
          overflow: visible !important
@@ -869,8 +870,6 @@
       width: 100%
       max-width: none
    &__item-text
-      float: left
-      width: 50%
       +r(767)
          font-size: 15px
    &__item-title
@@ -885,6 +884,10 @@
       margin-top: 13px
       +r(767)
          margin-top: 3px
+      &-hidden
+         display: none
+         &.is-active
+            display: inline
    &__item-btn
       display: block
       padding: 14px 0
@@ -919,9 +922,29 @@
             top: auto
             right: 0
             bottom: -30px
-
+   &__video
+      margin-top: 40px
+      &.is-youtube
+         position: relative
+         padding-bottom: 56.25%
+         padding-top: 30px
+         height: 0
+         overflow: hidden
+         iframe,
+         object,
+         embed
+            position: absolute
+            z-index: 1
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+      +r(1199)
+         margin-top: 35px
+      +r(767)
+         margin-top: 30px
+      
 // steps section
-
 .steps
    padding: 73px 0 62px
    background-color: #e8e8e8
@@ -1337,6 +1360,13 @@
       height: 550px
       +r(1199)
          height: 340px
+   
+.video
+   padding-bottom: 80px
+   +r(1199)
+      padding-bottom: 70px
+   +r(767)
+      padding-bottom: 50px
 
 
 
